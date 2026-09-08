@@ -1,0 +1,64 @@
+name: Bug report
+description: Report a reproducible 齐放Post problem without private account data
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: "Do not include passwords, cookies, tokens, QR codes, private videos, or unredacted account details."
+  - type: input
+    id: version
+    attributes:
+      label: 齐放Post version
+      placeholder: "0.2.103"
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - macOS Apple Silicon
+        - Windows 10/11 x64
+        - Other / unsupported
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Publishing platform
+      options:
+        - Douyin
+        - WeChat Channels
+        - Xiaohongshu
+        - Kuaishou
+        - App / packaging / other
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Include the last evidenced state (upload, form ready, submitted, reviewing, or published).
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed behavior and redacted evidence
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: I removed credentials, cookies, tokens, QR codes, private media, and personal account information.
+          required: true

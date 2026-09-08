@@ -1,0 +1,9 @@
+interface:
+  display_name: "齐放Post"
+  short_description: "用齐放Post安全发布、恢复并核验四平台短视频任务"
+  icon_small: "./assets/logo.png"
+  icon_large: "./assets/logo.png"
+  brand_color: "#0F3B7A"
+  default_prompt: "使用 $qifang-post 安全准备、发布并核验这个成品视频在所选平台上的独立状态。"
+policy:
+  allow_implicit_invocation: true
