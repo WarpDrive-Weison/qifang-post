@@ -24,6 +24,7 @@
 - 校验清单：`SHA256SUMS-0.2.103.txt`
 - Codex 技能包：`qifang-post-skill-0.2.103.zip`
 - FFmpeg 对应源码：`ffmpeg-9.0.1.tar.xz`
+- FFmpeg 上游签名：`ffmpeg-9.0.1.tar.xz.asc`
 
 安装前执行 SHA-256 校验，并与 Release 中的清单逐字比对。详细步骤见 [安装说明](docs/INSTALL.md)。
 
@@ -31,7 +32,7 @@
 
 | 系统 | 架构 | 当前状态 |
 | --- | --- | --- |
-| macOS 12 Monterey 或更高版本 | Apple Silicon / arm64 | 本机打包、安装、启动、迁移与结构回归；ad-hoc 签名，未公证 |
+| macOS 12 Monterey 或更高版本 | Apple Silicon / arm64 | 本机打包、DMG/架构/签名验证与包内媒体冒烟测试；ad-hoc 签名，未公证 |
 | Windows 10/11 | x64 | macOS 交叉构建、解包、架构与源码一致性核验；未做 Windows 原生运行验收，未签名 |
 
 Intel Mac、Windows ARM 与更旧系统暂不在当前支持范围内。

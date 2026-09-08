@@ -13,7 +13,7 @@ QA date: 2026-09-08 (Asia/Shanghai)
 
 ## Platform-specific evidence
 
-- macOS: DMG verification, ZIP integrity, application parity, arm64 checks, ad-hoc signing integrity, install/launch check, and preservation counts.
+- macOS: DMG verification, application parity, all-Mach-O arm64 checks, ad-hoc signing integrity, packaged media smoke, and package-resource readback.
 - Windows: Setup and portable extraction, AMD64 checks, package-source parity, NSIS structure, UTF-8 path verification, and checksum readback.
 
 ## Evidence boundary

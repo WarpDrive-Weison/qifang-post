@@ -29,10 +29,21 @@ Release date: 2026-09-08
 - Platform web pages can change without notice. Login, captcha, verification, risk control, agreement, or account-permission prompts may require user action.
 - Automated tests do not constitute a new public post on any platform.
 
+## Verification results
+
+- Full Node regression: 668/668 passed.
+- Electron/DOM regression: all 19 scripts passed, including 57/57 upload-entry structures.
+- Real local-media pipeline and packaged macOS media/cover smoke: passed.
+- macOS DMG: 161,421,301 bytes; all 20 packaged Mach-O files are arm64; `codesign --deep --strict` passed; SHA-256 `b33ad009f55cdd7fe1c205868c175f877fe9f7277d18cbe8083a5a6626f4cff4`.
+- Windows Setup: 132,781,036 bytes; x64 application, FFmpeg, FFprobe, and sharp payload verified after NSIS extraction; SHA-256 `0a7e83196d1d939c78c7780aec67ec25dd4e6b53c1245f618018aff80e11fe6d`.
+- Codex skill archive: extracted and validated; SHA-256 `c352abd28e9e82dc7ff4d9c9fe4c308d8b0137a2f091cc13aca11839756fe484`.
+- The authoritative digest list is `SHA256SUMS-0.2.103.txt`.
+
 ## Downloads
 
 - `齐放Post-0.2.103-macOS-QA-arm64.dmg`
 - `齐放Post-0.2.103-Windows-QA-x64-Setup.exe`
 - `qifang-post-skill-0.2.103.zip`
 - `ffmpeg-9.0.1.tar.xz`
+- `ffmpeg-9.0.1.tar.xz.asc`
 - `SHA256SUMS-0.2.103.txt`
