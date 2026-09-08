@@ -41,8 +41,8 @@ Release date: 2026-09-08
 
 ## Downloads
 
-- `齐放Post-0.2.103-macOS-QA-arm64.dmg`
-- `齐放Post-0.2.103-Windows-QA-x64-Setup.exe`
+- `QifangPost-0.2.103-macOS-QA-arm64.dmg`
+- `QifangPost-0.2.103-Windows-QA-x64-Setup.exe`
 - `qifang-post-skill-0.2.103.zip`
 - `ffmpeg-9.0.1.tar.xz`
 - `ffmpeg-9.0.1.tar.xz.asc`
