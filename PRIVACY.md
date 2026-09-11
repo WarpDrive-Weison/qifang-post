@@ -10,11 +10,13 @@ The app does not record platform passwords. Login, QR scan, captcha, verificatio
 
 Imported videos and generated/uploaded cover assets are processed locally before the selected platform receives them. The selected publishing platform receives the video and metadata when the user starts that platform's upload.
 
-The public QA build does not include 齐放Post's private managed-AI gateway or managed media-upload service.
+The 0.2.107 QA package includes an HTTPS managed text-generation endpoint. Managed media upload and cloud transcription are disabled in this package; the text-generation request does not contain the complete video or cover file.
 
 ## Optional AI copy generation
 
-When the user configures a DeepSeek or OpenAI-compatible API and requests AI copy generation, the transcript, filename context, duration, and user-supplied copy prompt needed for the request may be sent to that provider. A user-provided API key is stored with Electron's operating-system-backed secure storage when available and is not intentionally written to logs.
+When the user requests AI copy generation through the default service, the app sends the transcript, title context, duration, media SHA-256, locale, installation identifier and client version to 齐放Post's HTTPS server. The server calls the upstream AI provider and returns text. Upstream API credentials are server-side rather than bundled in the client configuration. Service availability and quota are controlled by the server; a configured endpoint is not a guarantee of uninterrupted access.
+
+If the user instead configures a personal DeepSeek or OpenAI-compatible API, the transcript and other necessary prompt context may be sent to that provider. A user-provided API key is stored with Electron's operating-system-backed secure storage when available and is not intentionally written to logs. Manual copy entry does not require an AI request.
 
 ## Publishing evidence
 
@@ -22,12 +24,13 @@ The local ledger records task state, platform, account descriptor, media fingerp
 
 ## Retention and deletion
 
-Uninstalling 齐放Post removes the application but intentionally leaves its per-user data so that accounts, drafts, generated assets, and task evidence can survive a reinstall. The default Electron user-data locations are:
+Removing the macOS application bundle leaves its per-user data so that accounts, drafts, generated assets, and task evidence can survive a reinstall. The current public package uses:
 
 - macOS: `~/Library/Application Support/齐放Post`
-- Windows: `%APPDATA%\齐放Post` (normally `C:\Users\<user>\AppData\Roaming\齐放Post`)
 
-To remove the app's retained data, first quit 齐放Post and close every platform window it opened. Then use Finder's **Go to Folder** or Windows File Explorer to locate and delete only the exact `齐放Post` directory shown above. This removes the app's local sessions, encrypted API-key files, drafts, derived media/cover assets, and publishing ledger. It does not delete the original video at the absolute path recorded by the app. Back up anything needed for audit or recovery before deletion.
+To remove the app's retained data, first quit 齐放Post and close every platform window it opened. Then use Finder's **Go to Folder** to locate and delete only the exact `齐放Post` directory shown above. This removes the app's local sessions, encrypted API-key files, drafts, derived media/cover assets, and publishing ledger. It does not delete the original video at the absolute path recorded by the app. Back up anything needed for audit or recovery before deletion.
+
+Windows distribution was withdrawn on 2026-09-11. Withdrawing its download does not remotely delete existing installations or their locally retained data.
 
 ## User responsibility
 

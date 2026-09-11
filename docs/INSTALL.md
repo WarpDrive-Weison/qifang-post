@@ -1,43 +1,44 @@
-# Installation and verification
+# 安装与校验
 
-## Verify downloads
+## 下载什么
 
-Download the installer and `SHA256SUMS-0.2.103.txt` from the same GitHub Release.
+当前公开版本为 0.2.107，仅支持 macOS 12 或更高版本的 Apple 芯片 Mac。
 
-macOS:
+从同一个 [v0.2.107 Release](https://github.com/WarpDrive-Weison/qifang-post/releases/tag/v0.2.107) 下载：
+
+- `QifangPost-0.2.107-macOS-QA-arm64.dmg`：推荐安装方式。
+- `QifangPost-0.2.107-macOS-QA-arm64.zip`：备用，与 DMG 二选一。
+- `SHA256SUMS-0.2.107.txt`：完整性校验。
+
+Codex 技能是可选的，不安装也能运行 APP。FFmpeg 源码与上游签名属于第三方合规、重建及核验材料，不需要安装；GitHub 自动提供的 Source code 压缩包是本仓库的说明与技能，不是 APP 安装包。
+
+## 校验
+
+在下载目录运行：
 
 ```bash
-shasum -a 256 "QifangPost-0.2.103-macOS-QA-arm64.dmg"
+shasum -a 256 "QifangPost-0.2.107-macOS-QA-arm64.dmg"
 ```
 
-Windows PowerShell:
+结果必须与 `SHA256SUMS-0.2.107.txt` 中同名条目完全一致。使用 ZIP 时相应替换文件名。
 
-```powershell
-Get-FileHash ".\QifangPost-0.2.103-Windows-QA-x64-Setup.exe" -Algorithm SHA256
-```
+## 安装
 
-The calculated value must match the checksum list exactly.
+1. 退出正在运行的齐放Post；先妥善处理进行中的任务。
+2. 打开 DMG，把齐放Post.app 拖入 Applications；或解压 ZIP 后移动 APP。
+3. 从 Applications 打开齐放Post，确认版本为 0.2.107。
+4. 在新的电脑上分别登录各平台。安装包不会带上其他电脑的账号、Cookie、草稿或 API Key。
 
-## macOS
+当前包为 ad-hoc 签名、未完成 Apple 公证的 QA 版。macOS 可能拦截首次启动，请先检查下载来源、校验值和安全提示，再决定是否在系统设置的隐私与安全性中允许打开；不要全局关闭 Gatekeeper。包内校验通过不代表已完成其他 Mac 的安装验收。
 
-Requirements: macOS 12 Monterey or later on Apple Silicon.
+## AI 文案
 
-1. Open the DMG.
-2. Drag 齐放Post to Applications.
-3. Open the installed application.
+默认 HTTPS 服务端中转已写入 0.2.107，正常使用默认服务不要求自行填写 API Key。接口访问与额度受服务端控制；需要联网。可以改用手动文案或用户自有 API，数据范围见 [隐私说明](../PRIVACY.md)。
 
-The current QA build is ad-hoc signed but not Apple-notarized. macOS may block the first launch. Review the warning and checksum before using System Settings > Privacy & Security to allow an app you trust. Do not disable Gatekeeper globally.
+## 更新与保留
+
+替换 APP 不应删除 `~/Library/Application Support/齐放Post` 中的账号、草稿、素材和任务记录。升级前备份重要数据；仅将旧 APP 移走，不要顺带清空应用数据目录。保留最新版安装包与 SHA-256，只清理已被新版替代的旧安装包。
 
 ## Windows
 
-Requirements: Windows 10 or 11 x64.
-
-Run `QifangPost-0.2.103-Windows-QA-x64-Setup.exe`. It installs for the current user and creates Start menu and desktop shortcuts.
-
-The current QA build has no Authenticode signature. Windows may show an unknown-publisher or SmartScreen warning. Continue only after verifying the checksum and source of the download.
-
-Windows speech transcription may require the Simplified Chinese speech feature in Windows Settings.
-
-## Update and uninstall behavior
-
-Replacing the application is designed to preserve per-user accounts, drafts, media assets, and task records. Uninstalling the Windows application removes program files and shortcuts but intentionally leaves user data for a later reinstall. Back up important material before any upgrade.
+2026-09-11 起暂停公开分发；旧 Windows 安装程序已从 Release 撤下，本次不提供 Windows 安装包或安装指导。已下载的副本无法远程撤回。

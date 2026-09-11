@@ -4,7 +4,7 @@
   <p>面向抖音、视频号、小红书与快手的桌面短视频发布工作台</p>
 </div>
 
-> 当前公开版本为 **v0.2.103 预发布 QA 版**。安装包尚未完成 Apple 公证或 Windows Authenticode 签名，请先核对 SHA-256，并阅读下方已知限制。
+> 当前公开版本为 **v0.2.107 预发布 QA 版**，仅提供 Apple 芯片 Mac 版。安装包为 ad-hoc 签名，尚未完成 Apple 公证；请先核对 SHA-256 并阅读已知限制。**Windows 版已于 2026-09-11 暂停公开分发，旧安装程序已撤下。**
 
 ## 功能概览
 
@@ -17,25 +17,23 @@
 
 ## 下载
 
-请前往 [Releases](https://github.com/WarpDrive-Weison/qifang-post/releases) 下载：
+请前往 [v0.2.107 Release](https://github.com/WarpDrive-Weison/qifang-post/releases/tag/v0.2.107) 下载：
 
-- macOS（Apple 芯片）：`QifangPost-0.2.103-macOS-QA-arm64.dmg`
-- Windows 10/11 x64：`QifangPost-0.2.103-Windows-QA-x64-Setup.exe`
-- 校验清单：`SHA256SUMS-0.2.103.txt`
-- Codex 技能包：`qifang-post-skill-0.2.103.zip`
-- FFmpeg 对应源码：`ffmpeg-9.0.1.tar.xz`
-- FFmpeg 上游签名：`ffmpeg-9.0.1.tar.xz.asc`
+- macOS 安装包（推荐）：`QifangPost-0.2.107-macOS-QA-arm64.dmg`
+- macOS 备用压缩包：`QifangPost-0.2.107-macOS-QA-arm64.zip`（与 DMG 二选一）
+- 校验清单：`SHA256SUMS-0.2.107.txt`
+- 可选 Codex 技能包：`qifang-post-skill-0.2.103.zip`（技能内容未变，兼容 0.2.107）
+- 第三方合规材料：`ffmpeg-9.0.1.tar.xz` 和 `ffmpeg-9.0.1.tar.xz.asc`
 
-安装前执行 SHA-256 校验，并与 Release 中的清单逐字比对。详细步骤见 [安装说明](docs/INSTALL.md)。
+**普通用户只需安装 DMG 或 ZIP 中的 APP，无需安装 Codex 技能、源码或上游签名文件。**安装前核对 SHA-256；详细步骤见 [安装说明](docs/INSTALL.md)。
 
 ## 支持范围
 
 | 系统 | 架构 | 当前状态 |
 | --- | --- | --- |
 | macOS 12 Monterey 或更高版本 | Apple Silicon / arm64 | 本机打包、DMG/架构/签名验证与包内媒体冒烟测试；ad-hoc 签名，未公证 |
-| Windows 10/11 | x64 | macOS 交叉构建、解包、架构与源码一致性核验；未做 Windows 原生运行验收，未签名 |
 
-Intel Mac、Windows ARM 与更旧系统暂不在当前支持范围内。
+Intel Mac、Windows 与更旧系统不在当前公开支持范围内。旧 Windows 版不再提供下载、安装教程或更新入口。
 
 ## 使用流程
 
@@ -47,11 +45,13 @@ Intel Mac、Windows ARM 与更旧系统暂不在当前支持范围内。
 
 ## AI 文案说明
 
-公开 QA 包不内置齐放Post运营方的托管 AI 额度或私有网关。需要 AI 文案时，请在设置中配置用户自己的 DeepSeek 或 OpenAI 兼容 API；不配置时仍可手动填写标题、正文与话题。
+0.2.107 包含默认 HTTPS 文案中转地址：APP 把必要文本提交到齐放Post服务端，由服务端调用 AI 并返回文案；上游 API Key 不放在客户端配置中。使用默认服务不要求用户自行填写 Key，服务可用性和额度仍受服务端控制。也可手动填写文案，或自行配置 DeepSeek / OpenAI 兼容 API。
+
+默认 AI 请求涉及逐字稿、标题上下文、时长、媒体摘要和安装标识；不会把完整视频作为文案请求发送。此包未启用托管媒体上传或云端转写。详见 [隐私说明](PRIVACY.md)。本次发布核对了包内配置，未将配置存在冒充线上 AI 服务验收。
 
 ## Codex 技能
 
-仓库内的 [qifang-post skill](skills/qifang-post/SKILL.md) 提供齐放Post的标准发布、恢复与证据核验流程。
+仓库内的 [qifang-post skill](skills/qifang-post/SKILL.md) 提供齐放Post的标准发布、恢复与证据核验流程。它是 Codex 用户的可选辅助，不是 APP 的运行依赖；本次沿用兼容 0.2.107 的 0.2.103 技能包。
 
 安装示例：
 
@@ -68,7 +68,7 @@ cp -R skills/qifang-post ~/.codex/skills/qifang-post
 
 ## 隐私、安全与第三方组件
 
-安装包不包含平台登录态。平台 Cookie 按本机用户、平台和账号隔离；应用不记录平台密码。视频会上传至用户选定的平台，公开 QA 包没有齐放Post托管 AI 视频上传服务。
+安装包不包含平台登录态。平台 Cookie 按本机用户、平台和账号隔离；应用不记录平台密码。视频会上传至用户选定的平台；文案 AI 的数据范围与发布上传相互独立。
 
 - [隐私说明](PRIVACY.md)
 - [安全策略](SECURITY.md)
@@ -79,7 +79,7 @@ cp -R skills/qifang-post ~/.codex/skills/qifang-post
 
 ## 版本与验收
 
-v0.2.103 的完整变更、测试数字和限制见 [Release Notes](docs/RELEASE_NOTES_0.2.103.md) 与 [QA Scope](docs/QA_SCOPE_0.2.103.md)。平台页面会持续改版，离线回归和安装验证不等同于一次新的公网投稿。
+v0.2.107 的变更、测试数字和限制见 [Release Notes](docs/RELEASE_NOTES_0.2.107.md) 与 [QA Scope](docs/QA_SCOPE_0.2.107.md)。平台页面会持续改版，离线回归和安装验证不等同于一次新的公网投稿，也不保证所有电脑或平台页面零故障。
 
 ## 第三方平台声明
 

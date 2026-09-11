@@ -11,7 +11,7 @@ body:
     id: version
     attributes:
       label: 齐放Post version
-      placeholder: "0.2.103"
+      placeholder: "0.2.107"
     validations:
       required: true
   - type: dropdown
@@ -20,7 +20,6 @@ body:
       label: Operating system
       options:
         - macOS Apple Silicon
-        - Windows 10/11 x64
         - Other / unsupported
     validations:
       required: true

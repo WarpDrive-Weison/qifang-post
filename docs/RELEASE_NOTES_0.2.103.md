@@ -1,5 +1,10 @@
 # 齐放Post v0.2.103
 
+> Historical release. As of 2026-09-11, the Windows installer has been withdrawn
+> and is no longer offered for download. Current macOS downloads and support are
+> in [v0.2.107](https://github.com/WarpDrive-Weison/qifang-post/releases/tag/v0.2.107).
+> Original Windows QA evidence below is retained as history, not current support.
+
 Release channel: public pre-release / QA  
 Release date: 2026-09-08
 
@@ -42,7 +47,6 @@ Release date: 2026-09-08
 ## Downloads
 
 - `QifangPost-0.2.103-macOS-QA-arm64.dmg`
-- `QifangPost-0.2.103-Windows-QA-x64-Setup.exe`
 - `qifang-post-skill-0.2.103.zip`
 - `ffmpeg-9.0.1.tar.xz`
 - `ffmpeg-9.0.1.tar.xz.asc`

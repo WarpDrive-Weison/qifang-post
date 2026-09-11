@@ -1,5 +1,8 @@
 # v0.2.103 QA scope
 
+> Historical QA record. Windows distribution was withdrawn on 2026-09-11.
+> Current macOS scope: [0.2.107](QA_SCOPE_0.2.107.md).
+
 QA date: 2026-09-08 (Asia/Shanghai)
 
 ## Required release checks

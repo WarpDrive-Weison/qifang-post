@@ -1,6 +1,6 @@
 # Rebuilding the bundled FFmpeg executables
 
-齐放Post v0.2.103 uses separate FFmpeg 9.0.1 command-line executables. They are
+齐放Post v0.2.107 uses separate FFmpeg 9.0.1 command-line executables. They are
 built from the unmodified upstream source archive attached to the same GitHub
 Release.
 
@@ -45,7 +45,12 @@ make -j8
 make DESTDIR="$PWD/stage" install
 ```
 
-## Windows x64 cross-build on macOS
+## Historical Windows configuration (withdrawn distribution)
+
+Windows application downloads and support were withdrawn on 2026-09-11. The
+following third-party FFmpeg configuration is retained solely as historical
+corresponding-build information for previously distributed LGPL binaries. It
+is not application source code or a current Windows release workflow.
 
 Install a MinGW-w64 x64 cross-compiler, then run:
 
