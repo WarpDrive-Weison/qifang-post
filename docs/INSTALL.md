@@ -43,4 +43,4 @@ shasum -a 256 "QifangPost-0.2.109-macOS-QA-arm64.dmg"
 
 下载同一 Release 的 `qifang-post-skill-0.2.109.zip`，按 `SHA256SUMS-skill-0.2.109.txt` 校验。由具备本机浏览器控制与文件上传能力的 AI 客户端加载技能，操作它支持的 Windows 浏览器。技能不自带 AI 或控制引擎，也不使用 Mac APP 的内置服务；仅有纯文本聊天能力不能执行网页操作。
 
-详细步骤、示例请求及依赖见 [Windows 技能指南](WINDOWS_SKILL.md)。旧 Windows APP 安装程序仍保持下架；Windows 技能的真实平台发布验收为 NOT_RUN。
+推荐使用 Codex 配合技能使用，大语言模型选择 GPT 5.6 sol 以上模型。详细步骤、示例请求及依赖见 [Windows 技能指南](WINDOWS_SKILL.md)，测试记录见 [QA Scope](QA_SCOPE_0.2.109.md)。旧 Windows APP 安装程序仍保持下架。

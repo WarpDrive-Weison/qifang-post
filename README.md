@@ -4,7 +4,7 @@
   <p>面向抖音、视频号、小红书与快手的桌面短视频发布工作台</p>
 </div>
 
-> 当前版本 **0.2.109**：Mac 使用齐放Post APP；Windows 使用 **AI 技能 + 本机浏览器**，无需安装齐放 APP。Mac 安装包仍为 ad-hoc 签名、未公证的 QA 预发布。Windows 技能流程已同步，原生浏览器端到端发布尚未实机验证；旧 Windows APP 安装程序仍不提供下载。
+> 当前版本 **0.2.109**：Mac 使用齐放Post APP；Windows 使用 **AI 技能 + 本机浏览器**，无需安装齐放 APP。**推荐使用 Codex 配合技能使用，大语言模型选择 GPT 5.6 sol 以上模型。**Mac 安装包仍为 ad-hoc 签名、未公证的 QA 预发布；旧 Windows APP 安装程序仍不提供下载。
 
 ## 两种运行方式
 
@@ -42,7 +42,7 @@ Windows 模式不要求齐放 APP，但不是“无需任何软件”：技能�
 | 系统 | 架构 | 当前状态 |
 | --- | --- | --- |
 | macOS 12 Monterey 或更高版本 | Apple Silicon / arm64 | 本机打包、DMG/架构/签名验证与包内媒体冒烟测试；ad-hoc 签名，未公证 |
-| Windows AI 技能模式 | 取决于 AI 客户端与浏览器 | 技能 0.2.109；不分发齐放 EXE；Windows 实机发布 NOT_RUN |
+| Windows AI 技能模式 | 取决于 AI 客户端与浏览器 | 技能 0.2.109；推荐 Codex 配合 GPT 5.6 sol 以上模型；不分发齐放 EXE |
 
 Intel Mac 与更旧 macOS 不在当前 APP 支持范围内。Windows 提供技能工作流，不提供旧 Windows APP 安装程序。
 

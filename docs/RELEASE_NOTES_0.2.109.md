@@ -4,7 +4,7 @@ Mac QA 预发布 · Apple Silicon / arm64
 
 ## 2026-09-18 技能与说明补充（Mac 安装包未变）
 
-新增 `qifang-post-skill-0.2.109.zip` 与 `SHA256SUMS-skill-0.2.109.txt`，将技能规则版本与 Mac APP 对齐。Windows 使用 AI + 授权本机浏览器模式，不需要齐放 APP，也不是 Mac APP 的 Windows 移植版。必须具备浏览器控制、文件上传及本地记录能力；Windows 端到端发布尚未实机验证。详见 [Windows 技能指南](WINDOWS_SKILL.md)。旧 0.2.103 技能包和摘要保留用于历史核验，新用户使用 0.2.109 技能。旧 Windows EXE 仍不提供。
+新增 `qifang-post-skill-0.2.109.zip` 与 `SHA256SUMS-skill-0.2.109.txt`，将技能规则版本与 Mac APP 对齐。Windows 使用 AI + 授权本机浏览器模式，不需要齐放 APP，也不是 Mac APP 的 Windows 移植版。推荐使用 Codex 配合技能使用，大语言模型选择 GPT 5.6 sol 以上模型。运行环境需具备浏览器控制、文件上传及本地记录能力。详见 [Windows 技能指南](WINDOWS_SKILL.md)，测试范围见 [QA Scope](QA_SCOPE_0.2.109.md)。旧 0.2.103 技能包和摘要保留用于历史核验，新用户使用 0.2.109 技能。旧 Windows EXE 仍不提供。
 
 ## 本次更新
 
