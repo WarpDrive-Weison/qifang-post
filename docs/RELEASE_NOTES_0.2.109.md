@@ -2,6 +2,10 @@
 
 Mac QA 预发布 · Apple Silicon / arm64
 
+## 2026-09-18 技能与说明补充（Mac 安装包未变）
+
+新增 `qifang-post-skill-0.2.109.zip` 与 `SHA256SUMS-skill-0.2.109.txt`，将技能规则版本与 Mac APP 对齐。Windows 使用 AI + 授权本机浏览器模式，不需要齐放 APP，也不是 Mac APP 的 Windows 移植版。必须具备浏览器控制、文件上传及本地记录能力；Windows 端到端发布尚未实机验证。详见 [Windows 技能指南](WINDOWS_SKILL.md)。旧 0.2.103 技能包和摘要保留用于历史核验，新用户使用 0.2.109 技能。旧 Windows EXE 仍不提供。
+
 ## 本次更新
 
 - **AI 限字与人工编辑分离**：AI 中文标题最多 20 字、正文最多 60 字；手动编辑母版及平台文案不受这两项生成限制。
@@ -15,10 +19,10 @@ Mac QA 预发布 · Apple Silicon / arm64
 - `QifangPost-0.2.109-macOS-QA-arm64.dmg`：推荐安装包。
 - `QifangPost-0.2.109-macOS-QA-arm64.zip`：备用，与 DMG 二选一。
 - `SHA256SUMS-0.2.109.txt`：安装包与配套材料校验清单。
-- `qifang-post-skill-0.2.103.zip`：未修改的可选技能，沿用默认人工确认流程；不是 APP 运行依赖。
+- `qifang-post-skill-0.2.109.zip` / `SHA256SUMS-skill-0.2.109.txt`：新版技能及摘要，支持 Mac APP 辅助流程与 Windows 独立浏览器模式。旧 `qifang-post-skill-0.2.103.zip` 仅保留供历史核验。
 - `ffmpeg-9.0.1.tar.xz` / `.asc`：第三方合规源码与上游签名，无需安装。
 
-普通用户仅安装 DMG 或 ZIP 中的 APP。Windows 继续暂停公开分发；本仓库不公开私有应用源码。
+Mac APP 用户仅安装 DMG 或 Mac ZIP 中的 APP；Windows 用户加载新版技能，按专用指南检查 AI 浏览器工具依赖。Windows APP 安装程序继续暂停公开分发；本仓库不公开私有应用源码。
 
 ## 使用提醒与边界
 

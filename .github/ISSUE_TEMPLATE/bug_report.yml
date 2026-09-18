@@ -11,7 +11,7 @@ body:
     id: version
     attributes:
       label: 齐放Post version
-      placeholder: "0.2.107"
+      placeholder: "APP 0.2.109 / Skill 0.2.109"
     validations:
       required: true
   - type: dropdown
@@ -20,6 +20,7 @@ body:
       label: Operating system
       options:
         - macOS Apple Silicon
+        - Windows AI skill + local browser (not Windows APP)
         - Other / unsupported
     validations:
       required: true
@@ -39,7 +40,7 @@ body:
     id: steps
     attributes:
       label: Reproduction steps
-      description: Include the last evidenced state (upload, form ready, submitted, reviewing, or published).
+      description: Include the execution mode, AI host/browser/tool versions for skill mode, and last evidenced state (upload, form ready, submitted, reviewing, or published).
     validations:
       required: true
   - type: textarea

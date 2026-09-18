@@ -4,7 +4,7 @@ Use the strongest independently observed state and keep lower states distinct.
 
 | State | Minimum evidence | Do not claim |
 | --- | --- | --- |
-| `PREPARED` | Local video and intended metadata are loaded in 齐放Post | Platform upload started |
+| `PREPARED` | Local video and metadata recorded in the Mac app or Windows local task record | Platform upload started |
 | `UPLOADING` | Platform accepted the file and transport is active | A trustworthy percentage when none is exposed |
 | `UPLOADED` | Platform reports transport complete | Form complete or submitted |
 | `FORM_READY` | Video and every required fingerprinted field read back correctly | Permission to publish |

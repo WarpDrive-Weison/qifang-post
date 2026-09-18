@@ -2,7 +2,7 @@
 
 ## 下载什么
 
-当前公开版本为 0.2.109，仅支持 macOS 12 或更高版本的 Apple 芯片 Mac。
+当前版本为 0.2.109。Mac APP 支持 macOS 12 或更高版本的 Apple 芯片 Mac；Windows 使用同版本 AI 技能模式，见[Windows 技能指南](WINDOWS_SKILL.md)。以下 APP 安装步骤仅适用于 Mac。
 
 从同一个 [v0.2.109 Release](https://github.com/WarpDrive-Weison/qifang-post/releases/tag/v0.2.109) 下载：
 
@@ -39,6 +39,8 @@ shasum -a 256 "QifangPost-0.2.109-macOS-QA-arm64.dmg"
 
 替换 APP 不应删除 `~/Library/Application Support/齐放Post` 中的账号、草稿、素材和任务记录。升级前备份重要数据；仅将旧 APP 移走，不要顺带清空应用数据目录。保留最新版安装包与 SHA-256，只清理已被新版替代的旧安装包。
 
-## Windows
+## Windows：无需安装齐放 APP
 
-2026-09-11 起暂停公开分发；旧 Windows 安装程序已从 Release 撤下，本次不提供 Windows 安装包或安装指导。已下载的副本无法远程撤回。
+下载同一 Release 的 `qifang-post-skill-0.2.109.zip`，按 `SHA256SUMS-skill-0.2.109.txt` 校验。由具备本机浏览器控制与文件上传能力的 AI 客户端加载技能，操作它支持的 Windows 浏览器。技能不自带 AI 或控制引擎，也不使用 Mac APP 的内置服务；仅有纯文本聊天能力不能执行网页操作。
+
+详细步骤、示例请求及依赖见 [Windows 技能指南](WINDOWS_SKILL.md)。旧 Windows APP 安装程序仍保持下架；Windows 技能的真实平台发布验收为 NOT_RUN。

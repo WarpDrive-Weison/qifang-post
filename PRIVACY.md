@@ -10,7 +10,7 @@ The app does not record platform passwords. Login, QR scan, captcha, verificatio
 
 Imported videos and generated/uploaded cover assets are processed locally before the selected platform receives them. The selected publishing platform receives the video and metadata when the user starts that platform's upload.
 
-The 0.2.107 QA package includes an HTTPS managed text-generation endpoint. Managed media upload and cloud transcription are disabled in this package; the text-generation request does not contain the complete video or cover file.
+The 0.2.109 Mac QA package includes an HTTPS managed text-generation endpoint. Managed media upload and cloud transcription are disabled in this package; the text-generation request does not contain the complete video or cover file.
 
 ## Optional AI copy generation
 
@@ -30,7 +30,11 @@ Removing the macOS application bundle leaves its per-user data so that accounts,
 
 To remove the app's retained data, first quit 齐放Post and close every platform window it opened. Then use Finder's **Go to Folder** to locate and delete only the exact `齐放Post` directory shown above. This removes the app's local sessions, encrypted API-key files, drafts, derived media/cover assets, and publishing ledger. It does not delete the original video at the absolute path recorded by the app. Back up anything needed for audit or recovery before deletion.
 
-Windows distribution was withdrawn on 2026-09-11. Withdrawing its download does not remotely delete existing installations or their locally retained data.
+Windows APP distribution was withdrawn on 2026-09-11. Withdrawing its download does not remotely delete existing installations or their locally retained data.
+
+## Windows AI skill mode (0.2.109)
+
+This mode does not run the Mac app or inherit its storage, encryption, or managed-AI service guarantees. Sessions stay in the chosen browser; task records are stored at a user-approved local location. The AI host may process supplied copy, transcripts, screenshots and page content under its own privacy terms. Video/cover uploads go to selected platforms through authorized browser tools. Do not supply raw Cookies, passwords or API secrets to the skill, and do not publish local task records or browser profiles. The skill ZIP contains workflow instructions and public assets, not the author's runtime data.
 
 ## User responsibility
 

@@ -1,19 +1,21 @@
 ---
 name: qifang-post
-description: Use the 齐放Post desktop app to prepare, publish, recover, and verify short-video tasks for Douyin, WeChat Channels, Xiaohongshu, and Kuaishou. Trigger for operating or troubleshooting 齐放Post; do not use it to bypass platform login, captcha, risk-control, account-permission, or final-confirmation gates.
+description: Prepare, publish, recover, and verify 齐放Post short-video tasks on four platforms, using the Mac app or a Windows AI-controlled browser workflow without the 齐放 app. Use when the user requests 齐放 publishing or recovery; requires available authorized browser controls for Windows mode.
 metadata:
-  version: "0.2.103"
+  version: "0.2.109"
 ---
 
 # 齐放Post
 
-Use 齐放Post as the system of record for a multi-platform publishing task. Keep the app task, the embedded platform page, and the platform management list aligned; do not substitute an unrelated browser session for an app-owned session.
+Select the execution mode before acting. On Mac with an app-owned task, use 齐放Post as the system of record and keep its embedded page and ledger aligned. On Windows without the app, read [references/windows-browser.md](references/windows-browser.md) and use an AI-controlled local browser with a separate local task record. Do not apply app-only instructions to Windows browser mode or move an unresolved app task into another browser.
+
+Skill release `0.2.109` aligns with the current Mac release's publishing rules, not its executable code or test results. Windows end-to-end execution is not yet verified by this release.
 
 ## Verify version and session ownership
 
-Before operating, read the app version shown by 齐放Post. This workflow requires version `0.2.103` or newer. If the version is older or cannot be verified, report the mismatch and do not assume that the cover, repair, fingerprint, or one-click protections described here are available.
+For Mac app mode, read the app version shown by 齐放Post. This revision targets `0.2.109`; do not assume newer controls exist in older versions. Windows mode has no app-version prerequisite; verify the loaded skill version and actual browser-tool capabilities instead.
 
-Operate publishing forms only in Chromium windows opened and owned by 齐放Post for the current task. A takeover or management window opened by the app remains inside that task boundary and may be inspected or completed according to the confirmation rules below. Treat the same platform opened independently in another browser as read-only corroborating evidence unless the user explicitly requests otherwise and the account, media fingerprint, task identity, and final-click count are all reconciled. Never use an unrelated external page to recreate or resubmit the task.
+In Mac app mode, operate publishing forms only in Chromium windows opened and owned by 齐放Post for the current task. A takeover or management window opened by the app remains inside that task boundary and may be inspected or completed according to the confirmation rules below. Treat the same platform opened independently in another browser as read-only corroborating evidence unless the user explicitly requests otherwise and the account, media fingerprint, task identity, and final-click count are all reconciled. Never use an unrelated external page to recreate or resubmit the task.
 
 ## Start from the requested outcome
 
@@ -21,7 +23,8 @@ Confirm the finished local video, selected platforms, title/body/topic intent, c
 
 Open the relevant reference only when needed:
 
-- For the normal end-to-end flow, read [references/workflow.md](references/workflow.md).
+- For the Mac app flow, read [references/workflow.md](references/workflow.md).
+- For Windows without the app, read [references/windows-browser.md](references/windows-browser.md).
 - For platform-specific form and cover checks, read [references/platform-checkpoints.md](references/platform-checkpoints.md).
 - For stalled uploads, cover dialogs, recovery, duplicate candidates, or task conflicts, read [references/recovery.md](references/recovery.md).
 - For evidence levels and completion language, read [references/evidence.md](references/evidence.md).

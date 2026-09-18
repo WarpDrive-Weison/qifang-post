@@ -4,7 +4,16 @@
   <p>面向抖音、视频号、小红书与快手的桌面短视频发布工作台</p>
 </div>
 
-> 当前公开版本为 **v0.2.109 预发布 QA 版**，仅提供 Apple 芯片 Mac 版。安装包为 ad-hoc 签名，尚未完成 Apple 公证；请先核对 SHA-256 并阅读已知限制。**Windows 版已于 2026-09-11 暂停公开分发，旧安装程序已撤下。**
+> 当前版本 **0.2.109**：Mac 使用齐放Post APP；Windows 使用 **AI 技能 + 本机浏览器**，无需安装齐放 APP。Mac 安装包仍为 ad-hoc 签名、未公证的 QA 预发布。Windows 技能流程已同步，原生浏览器端到端发布尚未实机验证；旧 Windows APP 安装程序仍不提供下载。
+
+## 两种运行方式
+
+| 方式 | 需要什么 | 谁执行自动化 |
+| --- | --- | --- |
+| Mac APP 0.2.109 | Apple 芯片 Mac、齐放 APP | APP 内置 Chromium 与发布引擎 |
+| Windows 技能 0.2.109 | 技能、具备本机浏览器控制/文件上传能力的 AI 客户端、其支持的浏览器 | AI 按技能操作用户授权的 Edge、Chrome 等本机浏览器 |
+
+Windows 模式不要求齐放 APP，但不是“无需任何软件”：技能本身不含 AI 模型或浏览器控制工具。安装和能力检查见 [Windows 技能指南](docs/WINDOWS_SKILL.md)。下方 APP 功能及使用流程指 Mac 模式；Windows 的自动化效果取决于 AI 客户端与浏览器工具，不能直接沿用 Mac 验收结果。
 
 ## 功能概览
 
@@ -23,18 +32,19 @@
 - macOS 安装包（推荐）：`QifangPost-0.2.109-macOS-QA-arm64.dmg`
 - macOS 备用压缩包：`QifangPost-0.2.109-macOS-QA-arm64.zip`（与 DMG 二选一）
 - 校验清单：`SHA256SUMS-0.2.109.txt`
-- 可选 Codex 技能包：`qifang-post-skill-0.2.103.zip`（技能内容未变，沿用默认人工确认流程）
+- AI 技能包：`qifang-post-skill-0.2.109.zip`（Mac 辅助操作 / Windows 独立浏览器模式）；技能摘要：`SHA256SUMS-skill-0.2.109.txt`
 - 第三方合规材料：`ffmpeg-9.0.1.tar.xz` 和 `ffmpeg-9.0.1.tar.xz.asc`
 
-**普通用户只需安装 DMG 或 ZIP 中的 APP，无需安装 Codex 技能、源码或上游签名文件。**安装前核对 SHA-256；详细步骤见 [安装说明](docs/INSTALL.md)。
+**Mac APP 用户只需安装 DMG 或 Mac ZIP；Windows 用户下载技能包，不安装 Mac APP。**两种方式均无需安装第三方源码或上游签名文件。下载后核对 SHA-256；详细步骤见 [安装说明](docs/INSTALL.md)。旧技能 0.2.103 仅供历史版本核验，新使用者请选择 0.2.109。
 
 ## 支持范围
 
 | 系统 | 架构 | 当前状态 |
 | --- | --- | --- |
 | macOS 12 Monterey 或更高版本 | Apple Silicon / arm64 | 本机打包、DMG/架构/签名验证与包内媒体冒烟测试；ad-hoc 签名，未公证 |
+| Windows AI 技能模式 | 取决于 AI 客户端与浏览器 | 技能 0.2.109；不分发齐放 EXE；Windows 实机发布 NOT_RUN |
 
-Intel Mac、Windows 与更旧系统不在当前公开支持范围内。旧 Windows 版不再提供下载、安装教程或更新入口。
+Intel Mac 与更旧 macOS 不在当前 APP 支持范围内。Windows 提供技能工作流，不提供旧 Windows APP 安装程序。
 
 ## 使用流程
 
@@ -52,9 +62,9 @@ Intel Mac、Windows 与更旧系统不在当前公开支持范围内。旧 Windo
 
 ## Codex 技能
 
-仓库内的 [qifang-post skill](skills/qifang-post/SKILL.md) 提供齐放Post的标准发布、恢复与证据核验流程。它是 Codex 用户的可选辅助，不是 APP 的运行依赖；本次沿用 0.2.103 技能包的默认人工确认流程，APP 开关不扩大 Codex 的操作权限。
+仓库内的 [qifang-post skill](skills/qifang-post/SKILL.md) 已同步为 **0.2.109**：Mac 模式辅助操作 APP，Windows 模式由 AI 直接操作授权浏览器。技能不是 Mac APP 的运行依赖；Windows 模式默认最终人工确认，APP 开关不扩大 AI 工具权限。无需为了版本号一致而安装旧 Windows EXE。
 
-安装示例：
+Mac 技能安装示例（Windows 见[专用指南](docs/WINDOWS_SKILL.md)）：
 
 ```bash
 mkdir -p ~/.codex/skills

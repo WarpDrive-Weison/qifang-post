@@ -1,4 +1,4 @@
-# Standard workflow
+# Mac app workflow
 
 ## 1. Establish the task identity
 
@@ -10,9 +10,9 @@ If the app reports an existing active task, inspect the task ledger before start
 
 Import the finished video, obtain the transcript, then let the app produce a concise master title and short body. Read the generated values back before continuing:
 
-- Master title: at most 20 Unicode characters.
-- Short body: at most 60 Unicode characters.
-- Platform copies may differ where platform limits require it.
+- AI-generated Chinese title: at most 20 Unicode characters; AI-generated body: at most 60.
+- Preserve manual edits in full, including longer text and line breaks. Check each platform's actual limits separately; warn and request adjustment instead of silently truncating.
+- Platform copies may differ when requested by the user.
 - Do not paste a long transcript into the body merely because transcription succeeded.
 
 For topics, type or select the intended term, wait for the platform suggestion list, choose the matching suggestion, then confirm that the platform renders a selected chip/token. Avoid duplicates and unrelated high-traffic suggestions.

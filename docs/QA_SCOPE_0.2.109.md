@@ -1,5 +1,9 @@
 # v0.2.109 QA scope
 
+## 2026-09-18 skill-only supplement
+
+Skill 0.2.109 now includes a Windows AI-controlled local-browser workflow independent of the Mac app. Documentation, routing, reference links, metadata and ZIP integrity are checked; Windows native browser execution and real publishing are NOT_RUN. The Mac binaries and their original test evidence below are unchanged. Version alignment is not execution-engine or QA equivalence. Historical skill 0.2.103 assets remain for checksum continuity; new users should select the 0.2.109 skill.
+
 ## Scope
 
 - Human-authored title/body preservation across native text input, renderer/preload IPC, disk persistence, restart and synchronization to four platform drafts.
@@ -19,6 +23,6 @@
 
 ## Evidence boundary
 
-These are local regression and package checks, not a new public post. No online AI-service availability or quota guarantee is made. The package is ad-hoc signed, without Apple notarization or another-Mac installation acceptance. Windows distribution remains withdrawn.
+These are local regression and package checks, not a new public post. No online AI-service availability or quota guarantee is made. The package is ad-hoc signed, without Apple notarization or another-Mac installation acceptance. Windows APP distribution remains withdrawn; the separate Windows skill workflow is covered by the supplement above.
 
-The optional skill stays at 0.2.103 and retains its manual-confirmation workflow. No proprietary application source is published; GitHub source archives contain public documentation and the skill only.
+At the original Mac binary release, the optional skill was 0.2.103; the supplement above updates it to 0.2.109 with final confirmation retained. No proprietary application source is published; GitHub source archives at each tag contain that tag's public documentation and skill snapshot only. Use the named updated skill asset or current main branch for the supplement; the historical v0.2.109 tag is not rewritten.
