@@ -1,6 +1,6 @@
 # Rebuilding the bundled FFmpeg executables
 
-齐放Post v0.2.107 uses separate FFmpeg 9.0.1 command-line executables. They are
+齐放Post v0.2.112 uses separate FFmpeg 9.0.1 command-line executables. They are
 built from the unmodified upstream source archive attached to the same GitHub
 Release.
 

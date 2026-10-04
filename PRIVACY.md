@@ -10,7 +10,7 @@ The app does not record platform passwords. Login, QR scan, captcha, verificatio
 
 Imported videos and generated/uploaded cover assets are processed locally before the selected platform receives them. The selected publishing platform receives the video and metadata when the user starts that platform's upload.
 
-The 0.2.109 Mac QA package includes an HTTPS managed text-generation endpoint. Managed media upload and cloud transcription are disabled in this package; the text-generation request does not contain the complete video or cover file.
+The 0.2.112 Mac QA package includes an HTTPS managed text-generation endpoint. Managed media upload and cloud transcription are disabled in this package; the text-generation request does not contain the complete video or cover file.
 
 ## Optional AI copy generation
 
@@ -32,7 +32,7 @@ To remove the app's retained data, first quit 齐放Post and close every platfor
 
 Windows APP distribution was withdrawn on 2026-09-11. Withdrawing its download does not remotely delete existing installations or their locally retained data.
 
-## Windows AI skill mode (0.2.109)
+## Windows AI skill mode (0.2.112)
 
 This mode does not run the Mac app or inherit its storage, encryption, or managed-AI service guarantees. Sessions stay in the chosen browser; task records are stored at a user-approved local location. The AI host may process supplied copy, transcripts, screenshots and page content under its own privacy terms. Video/cover uploads go to selected platforms through authorized browser tools. Do not supply raw Cookies, passwords or API secrets to the skill, and do not publish local task records or browser profiles. The skill ZIP contains workflow instructions and public assets, not the author's runtime data.
 
