@@ -11,7 +11,7 @@ Use the strongest independently observed state and keep lower states distinct.
 | `SUBMITTED` | One final click plus receipt/navigation/status evidence | Public visibility |
 | `SCHEDULED` | Platform shows accepted scheduled time | Immediate publication |
 | `REVIEWING` | Platform management surface shows review state for the matched item | Public visibility |
-| `PUBLISHED` | Matched management item explicitly shows published/public status | Cross-platform completion for other rows |
+| `PUBLISHED` / 发布成功 | After submission, complete same title in the current account's visible management work item (Mac title-match rule) | Review approval, public visibility, unique upload attribution, or other platform completion |
 | `BLOCKED` | Exact login/captcha/risk/permission/agreement gate is visible | Automatic recovery or bypass |
 
 ## Reporting template

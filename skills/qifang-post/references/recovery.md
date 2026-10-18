@@ -31,7 +31,7 @@ If bounded repair is exhausted, expose the takeover page with a precise unfinish
 
 ## Duplicate title candidates
 
-Repeated titles in the management list create an identity problem, not permission to resend. Compare platform account, submission time, task ID/fingerprint, receipt, status, and any platform content ID. Keep the current task at `SUBMITTED` or `REVIEWING` when publication cannot be attributed confidently.
+In Mac 0.2.117 post-submit verification, one complete matching title in the current account's visible management work item satisfies the app's 发布成功 rule even when repeated. Record that this is title presence, not unique attribution or public visibility. Before upload, preserve strict duplicate checks. Never resend to clarify a receipt. Windows may use this same business label only with the title-match evidence boundary explicitly recorded.
 
 ## Existing task is not visible
 

@@ -15,9 +15,9 @@ Import the finished video, obtain the transcript, then let the app produce a con
 - Platform copies may differ when requested by the user.
 - Do not paste a long transcript into the body merely because transcription succeeded.
 
-In app 0.2.112, check the local save status before preparing publication. If saving fails, keep the current window and use its retry control; do not regenerate AI copy or reload simply to clear the message. AI and master-sync proposals apply only after persistence; newer manual edits remain owned by the user. Unsaved settings or API keys require explicit handling when closing, rather than being silently saved.
+In app 0.2.117, check the local save status before preparing publication. If saving fails, keep the current window and use its retry control; do not regenerate AI copy or reload simply to clear the message. AI and master-sync proposals apply only after persistence; newer manual edits remain owned by the user. Unsaved settings or API keys require explicit handling when closing, rather than being silently saved.
 
-For topics, type or select the intended term, wait for the platform suggestion list, choose the matching suggestion, then confirm that the platform renders a selected chip/token. Avoid duplicates and unrelated high-traffic suggestions.
+For topics, type the intended term, wait for suggestions, prefer an exact match and otherwise choose the first applicable visible native topic candidate when ambiguous. Verify the selected chip/token; do not choose unrelated controls or duplicate tokens.
 
 ## 3. Bind covers
 
@@ -36,12 +36,12 @@ If the app performs a bounded same-page repair, allow it only when all of the fo
 
 ## 5. Confirm and submit
 
-Use the batch confirmation fingerprint only after every selected platform reaches `FORM_READY`. If any fingerprinted field changes, regenerate the confirmation.
+New Mac configurations default to secondary confirmation off; preserve existing saved settings. Use the batch confirmation fingerprint when confirmation is enabled, only after every selected platform reaches `FORM_READY`. If any fingerprinted field changes, regenerate the confirmation.
 
-After explicit confirmation, press each platform's final publish control no more than once. Capture the immediate receipt/status before closing or hiding the platform page.
+After the applicable app authorization checks, submit no more than once. Capture the immediate receipt/status before closing or hiding the platform page. This setting does not grant separate AI tools permission to publish unrequested content.
 
 ## 6. Verify independently
 
-Reconcile each platform separately against its management list using account, title, task time, and available platform identifier. A management-list match may prove submission/review/publication depending on the status shown; it does not automatically prove public visibility.
+After submission, the app accepts a complete matching title in a visible work item of the current account's management list. Time, review state and candidate uniqueness are not required. Record title-match evidence, including the possibility of an old same-title item; do not treat a search field, editor or truncated title as a match. Keep pre-upload deduplication strict.
 
-Return the ledger with one row per platform and no blended "all published" claim unless every row independently proves `PUBLISHED`.
+Return one result per platform. “发布成功” describes this app rule, not public availability or review approval. Never resubmit just to get clearer evidence.
