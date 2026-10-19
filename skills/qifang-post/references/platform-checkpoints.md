@@ -15,7 +15,7 @@ Platform pages change frequently. Prefer labels, accessible roles, nearby field 
 - Wait for platform processing after transport completes; the percentage alone is insufficient.
 - The cover editor may expose a 3:4 main cover plus an additional sharing/card slot. Bind the intended 3:4 cover and, when present, the 4:3 share cover.
 - After selecting or uploading the cover, activate the platform modal's Confirm control and verify the modal closes.
-- After submission in 0.2.117, a visible complete title match in the current account's work list satisfies the app's 发布成功 rule even with several candidates. This does not prove unique attribution or public visibility. Before upload, keep strict duplicate checks. Never duplicate-submit to disambiguate.
+- After submission in 0.2.118, a visible complete title match in the current account's work list satisfies the app's 发布成功 rule even with several candidates. This does not prove unique attribution or public visibility. Before upload, keep strict duplicate checks. Never duplicate-submit to disambiguate.
 
 ## Xiaohongshu
 

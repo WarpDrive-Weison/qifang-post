@@ -15,7 +15,7 @@ Import the finished video, obtain the transcript, then let the app produce a con
 - Platform copies may differ when requested by the user.
 - Do not paste a long transcript into the body merely because transcription succeeded.
 
-In app 0.2.117, check the local save status before preparing publication. If saving fails, keep the current window and use its retry control; do not regenerate AI copy or reload simply to clear the message. AI and master-sync proposals apply only after persistence; newer manual edits remain owned by the user. Unsaved settings or API keys require explicit handling when closing, rather than being silently saved.
+In app 0.2.118, check the local save status before preparing publication. If saving fails, keep the current window and use its retry control; do not regenerate AI copy or reload simply to clear the message. AI and master-sync proposals apply only after persistence; newer manual edits remain owned by the user. Unsaved settings or API keys require explicit handling when closing, rather than being silently saved.
 
 For topics, type the intended term, wait for suggestions, prefer an exact match and otherwise choose the first applicable visible native topic candidate when ambiguous. Verify the selected chip/token; do not choose unrelated controls or duplicate tokens.
 

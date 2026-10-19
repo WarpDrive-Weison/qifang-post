@@ -12,6 +12,8 @@ Separate the failure layers before retrying:
 
 Do not display a synthetic percentage. Show an indeterminate state when the platform does not expose measurable progress.
 
+Douyin's optional AI recommended-cover generation can remain pending after the video is uploaded. Distinguish that local recommendation panel from actual upload/transcoding indicators. Continue only with independent upload-completion evidence and no real upload failure/active-transfer gate; do not infer success from an unclassified API code such as 2000. Required user-selected cover upload and readback still apply.
+
 ## Cover dialog remains open
 
 Treat a visible platform cover modal as an unfinished form step. Locate the modal's own Confirm/Upload control, activate it once, then verify:
@@ -31,7 +33,7 @@ If bounded repair is exhausted, expose the takeover page with a precise unfinish
 
 ## Duplicate title candidates
 
-In Mac 0.2.117 post-submit verification, one complete matching title in the current account's visible management work item satisfies the app's 发布成功 rule even when repeated. Record that this is title presence, not unique attribution or public visibility. Before upload, preserve strict duplicate checks. Never resend to clarify a receipt. Windows may use this same business label only with the title-match evidence boundary explicitly recorded.
+In Mac 0.2.118 post-submit verification, one complete matching title in the current account's visible management work item satisfies the app's 发布成功 rule even when repeated. Record that this is title presence, not unique attribution or public visibility. Before upload, preserve strict duplicate checks. Never resend to clarify a receipt. Windows may use this same business label only with the title-match evidence boundary explicitly recorded.
 
 ## Existing task is not visible
 
