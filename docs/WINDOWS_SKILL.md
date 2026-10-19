@@ -12,7 +12,7 @@ Windows 不需要安装齐放Post APP。加载 `qifang-post` 技能后，由支�
 
 ## 下载与开始
 
-1. 从 [v0.2.118 Release](https://github.com/WarpDrive-Weison/qifang-post/releases/tag/v0.2.118) 下载 `qifang-post-skill-0.2.118.zip`，按 `SHA256SUMS-skill-0.2.118.txt` 核对摘要。PowerShell 可使用 `Get-FileHash -Algorithm SHA256 -LiteralPath '.\qifang-post-skill-0.2.118.zip'`。
+1. 从 [v0.2.120 Release](https://github.com/WarpDrive-Weison/qifang-post/releases/tag/v0.2.120) 下载 `qifang-post-skill-0.2.120.zip`，按 `SHA256SUMS-skill-0.2.120.txt` 核对摘要。PowerShell 可使用 `Get-FileHash -Algorithm SHA256 -LiteralPath '.\qifang-post-skill-0.2.120.zip'`。
 2. 解压后，应看到 `qifang-post/SKILL.md`、`references/` 等文件。按所选 AI 客户端的技能导入方式加载整个文件夹；不是双击 ZIP 就能自动运行。如果客户端支持读取本地文件但没有技能安装入口，可明确让它先读取 `SKILL.md` 及 Windows 参考流程，再执行当前任务；这不等于已永久安装技能。
 3. 让 AI 先检查浏览器控制、视频上传、本地任务记录读写能力。视频转写或首帧取图需要额外媒体处理能力，缺少时可提供现成文案与封面。能力不足应明确提示，不假装开始上传。
 4. 在所选浏览器登录自己的平台账号，提供成品视频、封面、文案和发布要求。不要向 AI 提供 Cookie、密码、令牌或私钥。
@@ -20,13 +20,13 @@ Windows 不需要安装齐放Post APP。加载 `qifang-post` 技能后，由支�
 
 示例请求：
 
-> 使用 qifang-post 0.2.118 的 Windows 浏览器模式，不安装齐放 APP。先检查你能否控制我授权的浏览器并上传本地文件。使用我提供的视频、封面和文案，先准备抖音表单，最终发布前让我核对确认；记录任务状态，回执不明确时不要重复发布。
+> 使用 qifang-post 0.2.120 的 Windows 浏览器模式，不安装齐放 APP。先检查你能否控制我授权的浏览器并上传本地文件。使用我提供的视频、封面和文案，先准备抖音表单，最终发布前让我核对确认；记录任务状态，回执不明确时不要重复发布。
 
 ## 版本同步与能力边界
 
-- Mac APP：0.2.118；Windows/跨平台技能：0.2.118。同步的是发布流程和规则版本，不代表两者共用执行引擎或具备相同验收结果。
+- Mac APP：0.2.120；Windows/跨平台技能：0.2.120。同步的是发布流程和规则版本，不代表两者共用执行引擎或具备相同验收结果。
 - 已同步 AI 标题 20 字/正文 60 字仅适用于生成、人工文案不截断、原生话题选择、封面上传后确认与回读、防重复提交等规则。
 - 技能默认要求最终确认；Mac APP 的二次确认开关不自动授权 Windows AI 执行发布。
 - Windows 技能不包含 Mac APP 的界面、自动修复代码、指纹弹窗、本机语音识别组件或默认 AI 中转服务。任务记录由 AI 在用户指定的本地位置维护。
-- 具体测试范围和记录见 [QA Scope](QA_SCOPE_0.2.118.md)。
+- 具体测试范围和记录见 [QA Scope](QA_SCOPE_0.2.120.md)。
 - 旧 Windows APP 安装程序仍不公开分发。本技能包不包含个人登录态、任务账本、API Key 或私人媒体；实际执行数据由所选浏览器、AI 客户端及本地记录管理。

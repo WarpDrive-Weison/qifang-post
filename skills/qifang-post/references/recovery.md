@@ -25,7 +25,11 @@ Treat a visible platform cover modal as an unfinished form step. Locate the moda
 
 If a click reports success but the modal remains, re-observe the active document, nested frame, overlay, and disabled state. Do not advance to final publish.
 
-## "Repair unfinished items"
+## Source file changed at the same path (Mac 0.2.120)
+
+A matching filename is not a matching video. If the app reports 需重新准备 because video bytes changed, do not keep clicking 恢复任务 or reuse the old confirmation. Confirm with the user that the current file is intended, then use 重新校验视频 on the eligible task, or 重新校验当前视频 in the workbench. These controls preserve manual copy, topics and cover choices while rebuilding media metadata; they do not upload, publish, or revive stopped tasks. Prepare again and obtain a fresh confirmation for changed content. If the file, cover, account or task changes during validation, resolve that change before retrying. Never revive a cancelled task or resend another platform merely because the source was refreshed.
+
+## "Repair unfinished items" on an unchanged source
 
 Automatic repair is safe only on the same page when the account, task fingerprint, and uploaded video are unchanged, there is no login/captcha/risk gate, and `finalClickCount` is zero. Repair may re-read or reapply unfinished form controls, but must not refresh, re-upload, or submit.
 
@@ -33,7 +37,7 @@ If bounded repair is exhausted, expose the takeover page with a precise unfinish
 
 ## Duplicate title candidates
 
-In Mac 0.2.118 post-submit verification, one complete matching title in the current account's visible management work item satisfies the app's 发布成功 rule even when repeated. Record that this is title presence, not unique attribution or public visibility. Before upload, preserve strict duplicate checks. Never resend to clarify a receipt. Windows may use this same business label only with the title-match evidence boundary explicitly recorded.
+In Mac 0.2.120 post-submit verification, one complete matching title in the current account's visible management work item satisfies the app's 发布成功 rule even when repeated. Record that this is title presence, not unique attribution or public visibility. Before upload, preserve strict duplicate checks. Never resend to clarify a receipt. Windows may use this same business label only with the title-match evidence boundary explicitly recorded.
 
 ## Existing task is not visible
 

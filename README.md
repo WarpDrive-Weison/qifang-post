@@ -4,14 +4,14 @@
   <p>面向抖音、视频号、小红书与快手的桌面短视频发布工作台</p>
 </div>
 
-> 当前版本 **0.2.118**：Mac 使用齐放Post APP；Windows 使用 **AI 技能 + 本机浏览器**，无需安装齐放 APP。**推荐使用 Codex 配合技能使用，大语言模型选择 GPT 5.6 sol 以上模型。**Mac 安装包仍为 ad-hoc 签名、未公证的 QA 预发布；旧 Windows APP 安装程序仍不提供下载。
+> 当前版本 **0.2.120**：Mac 使用齐放Post APP；Windows 使用 **AI 技能 + 本机浏览器**，无需安装齐放 APP。**推荐使用 Codex 配合技能使用，大语言模型选择 GPT 5.6 sol 以上模型。**Mac 安装包仍为 ad-hoc 签名、未公证的 QA 预发布；旧 Windows APP 安装程序仍不提供下载。
 
 ## 两种运行方式
 
 | 方式 | 需要什么 | 谁执行自动化 |
 | --- | --- | --- |
-| Mac APP 0.2.118 | Apple 芯片 Mac、齐放 APP | APP 内置 Chromium 与发布引擎 |
-| Windows 技能 0.2.118 | 技能、具备本机浏览器控制/文件上传能力的 AI 客户端、其支持的浏览器 | AI 按技能操作用户授权的 Edge、Chrome 等本机浏览器 |
+| Mac APP 0.2.120 | Apple 芯片 Mac、齐放 APP | APP 内置 Chromium 与发布引擎 |
+| Windows 技能 0.2.120 | 技能、具备本机浏览器控制/文件上传能力的 AI 客户端、其支持的浏览器 | AI 按技能操作用户授权的 Edge、Chrome 等本机浏览器 |
 
 Windows 模式不要求齐放 APP，但不是“无需任何软件”：技能本身不含 AI 模型或浏览器控制工具。安装和能力检查见 [Windows 技能指南](docs/WINDOWS_SKILL.md)。下方 APP 功能及使用流程指 Mac 模式；Windows 的自动化效果取决于 AI 客户端与浏览器工具，不能直接沿用 Mac 验收结果。
 
@@ -27,8 +27,12 @@ Windows 模式不要求齐放 APP，但不是“无需任何软件”：技能�
 
 ## 下载
 
-### 0.2.118 更新重点
+### 0.2.120 更新重点
 
+- 修复同路径视频被替换后，恢复任务仍复制旧素材指纹、反复失败的问题。新增“重新校验当前视频”和任务“重新校验视频”，明确确认当前素材后保留手动文案、话题和封面；校验不会自动上传、发布或复活已停止任务。
+- 文件发生变化时显示“需重新准备”及具体原因，不再误报为封面快照缺失或可自动恢复；取消、切换账号/素材及校验期间再次修改文件时，拒绝使用过期结果。
+- 包含 0.2.119 的封面保存回执保留、明确槽位居中裁切预览核验修复；四个平台共用恢复路径均有离线回归，仍需真实封面保存与回显证据。
+- 修复重新校验结束后进度遮罩未关闭的问题，成功和失败均能返回工作台。
 - 修复抖音“AI 智能推荐封面生成中”被误识别成视频处理中、导致上传完成后仍反复等待的问题。推荐封面生成与视频传输分开判断；真实上传、转码与失败门禁保留。
 - 任务徽标、统计和筛选统一显示“发布成功”。提交后在当前账号的作品管理列表找到相同完整标题即完成核验，不再等待时间或审核状态；这不等于审核通过或公开可见，也可能匹配旧同名作品。
 - AI 文案遇到可重试网络错误时自动进行有限重试，重复点击合并请求，仍保留较晚手工编辑；持续断网、额度或权限问题不会伪装为成功。
@@ -39,22 +43,22 @@ Windows 模式不要求齐放 APP，但不是“无需任何软件”：技能�
 - 任务记录支持搜索与平台筛选；改进空状态、窄窗口和错误提示。
 - 强化安装包隐私检查。AI 标题 20 字、正文 60 字规则与人工自由编辑保持分离。
 
-请前往 [v0.2.118 Release](https://github.com/WarpDrive-Weison/qifang-post/releases/tag/v0.2.118) 下载：
+请前往 [v0.2.120 Release](https://github.com/WarpDrive-Weison/qifang-post/releases/tag/v0.2.120) 下载：
 
-- macOS 安装包（推荐）：`QifangPost-0.2.118-macOS-QA-arm64.dmg`
-- macOS 备用压缩包：`QifangPost-0.2.118-macOS-QA-arm64.zip`（与 DMG 二选一）
-- 校验清单：`SHA256SUMS-0.2.118.txt`
-- AI 技能包：`qifang-post-skill-0.2.118.zip`（Mac 辅助操作 / Windows 独立浏览器模式）；技能摘要：`SHA256SUMS-skill-0.2.118.txt`
+- macOS 安装包（推荐）：`QifangPost-0.2.120-macOS-QA-arm64.dmg`
+- macOS 备用压缩包：`QifangPost-0.2.120-macOS-QA-arm64.zip`（与 DMG 二选一）
+- 校验清单：`SHA256SUMS-0.2.120.txt`
+- AI 技能包：`qifang-post-skill-0.2.120.zip`（Mac 辅助操作 / Windows 独立浏览器模式）；技能摘要：`SHA256SUMS-skill-0.2.120.txt`
 - 第三方合规材料：`ffmpeg-9.0.1.tar.xz` 和 `ffmpeg-9.0.1.tar.xz.asc`
 
-**Mac APP 用户只需安装 DMG 或 Mac ZIP；Windows 用户下载技能包，不安装 Mac APP。**两种方式均无需安装第三方源码或上游签名文件。下载后核对 SHA-256；详细步骤见 [安装说明](docs/INSTALL.md)。旧技能 0.2.103 仅供历史版本核验，新使用者请选择 0.2.118。
+**Mac APP 用户只需安装 DMG 或 Mac ZIP；Windows 用户下载技能包，不安装 Mac APP。**两种方式均无需安装第三方源码或上游签名文件。下载后核对 SHA-256；详细步骤见 [安装说明](docs/INSTALL.md)。旧技能 0.2.103 仅供历史版本核验，新使用者请选择 0.2.120。
 
 ## 支持范围
 
 | 系统 | 架构 | 当前状态 |
 | --- | --- | --- |
 | macOS 12 Monterey 或更高版本 | Apple Silicon / arm64 | 本机打包、DMG/架构/签名验证与包内媒体冒烟测试；ad-hoc 签名，未公证 |
-| Windows AI 技能模式 | 取决于 AI 客户端与浏览器 | 技能 0.2.118；推荐 Codex 配合 GPT 5.6 sol 以上模型；不分发齐放 EXE |
+| Windows AI 技能模式 | 取决于 AI 客户端与浏览器 | 技能 0.2.120；推荐 Codex 配合 GPT 5.6 sol 以上模型；不分发齐放 EXE |
 
 Intel Mac 与更旧 macOS 不在当前 APP 支持范围内。Windows 提供技能工作流，不提供旧 Windows APP 安装程序。
 
@@ -68,13 +72,13 @@ Intel Mac 与更旧 macOS 不在当前 APP 支持范围内。Windows 提供技�
 
 ## AI 文案说明
 
-0.2.118 保留默认 HTTPS 文案中转地址：APP 把必要文本提交到齐放Post服务端，由服务端调用 AI 并返回文案；上游 API Key 不放在客户端配置中。使用默认服务不要求用户自行填写 Key，服务可用性和额度仍受服务端控制。也可手动填写文案，或自行配置 DeepSeek / OpenAI 兼容 API。
+0.2.120 保留默认 HTTPS 文案中转地址：APP 把必要文本提交到齐放Post服务端，由服务端调用 AI 并返回文案；上游 API Key 不放在客户端配置中。使用默认服务不要求用户自行填写 Key，服务可用性和额度仍受服务端控制。也可手动填写文案，或自行配置 DeepSeek / OpenAI 兼容 API。
 
 默认 AI 请求涉及逐字稿、标题上下文、时长、媒体摘要和安装标识；不会把完整视频作为文案请求发送。此包未启用托管媒体上传或云端转写。详见 [隐私说明](PRIVACY.md)。本次发布核对了包内配置，未将配置存在冒充线上 AI 服务验收。
 
 ## Codex 技能
 
-仓库内的 [qifang-post skill](skills/qifang-post/SKILL.md) 已同步为 **0.2.118**：Mac 模式辅助操作 APP，Windows 模式由 AI 直接操作授权浏览器。技能不是 Mac APP 的运行依赖；Windows 模式默认最终人工确认，APP 开关不扩大 AI 工具权限。无需为了版本号一致而安装旧 Windows EXE。
+仓库内的 [qifang-post skill](skills/qifang-post/SKILL.md) 已同步为 **0.2.120**：Mac 模式辅助操作 APP，Windows 模式由 AI 直接操作授权浏览器。技能不是 Mac APP 的运行依赖；Windows 模式默认最终人工确认，APP 开关不扩大 AI 工具权限。无需为了版本号一致而安装旧 Windows EXE。
 
 Mac 技能安装示例（Windows 见[专用指南](docs/WINDOWS_SKILL.md)）：
 
@@ -102,7 +106,7 @@ APP 的“发布成功”是提交后作品列表同标题核验的业务状态�
 
 ## 版本与验收
 
-v0.2.118 的变更、测试数字和限制见 [Release Notes](docs/RELEASE_NOTES_0.2.118.md) 与 [QA Scope](docs/QA_SCOPE_0.2.118.md)。平台页面会持续改版，离线回归和安装验证不等同于一次新的公网投稿，也不保证所有电脑或平台页面零故障。
+v0.2.120 的变更、测试数字和限制见 [Release Notes](docs/RELEASE_NOTES_0.2.120.md) 与 [QA Scope](docs/QA_SCOPE_0.2.120.md)。平台页面会持续改版，离线回归和安装验证不等同于一次新的公网投稿，也不保证所有电脑或平台页面零故障。
 
 ## 第三方平台声明
 
