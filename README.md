@@ -4,13 +4,13 @@
   <p>面向抖音、视频号、小红书与快手的桌面短视频发布工作台</p>
 </div>
 
-> 当前版本 **0.2.120**：Mac 使用齐放Post APP；Windows 使用 **AI 技能 + 本机浏览器**，无需安装齐放 APP。**推荐使用 Codex 配合技能使用，大语言模型选择 GPT 5.6 sol 以上模型。**Mac 安装包仍为 ad-hoc 签名、未公证的 QA 预发布；旧 Windows APP 安装程序仍不提供下载。
+> 当前版本 **0.2.136**：Mac 使用齐放Post APP；Windows 使用 **AI 技能 + 本机浏览器**，无需安装齐放 APP。**推荐使用 Codex 配合技能使用，大语言模型选择 GPT 5.6 sol 以上模型。**Mac 安装包仍为 ad-hoc 签名、未公证的 QA 预发布；旧 Windows APP 安装程序仍不提供下载。
 
 ## 两种运行方式
 
 | 方式 | 需要什么 | 谁执行自动化 |
 | --- | --- | --- |
-| Mac APP 0.2.120 | Apple 芯片 Mac、齐放 APP | APP 内置 Chromium 与发布引擎 |
+| Mac APP 0.2.136 | Apple 芯片 Mac、齐放 APP | APP 内置 Chromium 与发布引擎 |
 | Windows 技能 0.2.120 | 技能、具备本机浏览器控制/文件上传能力的 AI 客户端、其支持的浏览器 | AI 按技能操作用户授权的 Edge、Chrome 等本机浏览器 |
 
 Windows 模式不要求齐放 APP，但不是“无需任何软件”：技能本身不含 AI 模型或浏览器控制工具。安装和能力检查见 [Windows 技能指南](docs/WINDOWS_SKILL.md)。下方 APP 功能及使用流程指 Mac 模式；Windows 的自动化效果取决于 AI 客户端与浏览器工具，不能直接沿用 Mac 验收结果。
@@ -27,7 +27,11 @@ Windows 模式不要求齐放 APP，但不是“无需任何软件”：技能�
 
 ## 下载
 
-### 0.2.120 更新重点
+### 0.2.136 更新重点
+
+四个平台的话题名称统一去除空格与不可见空白，例如 `Mac Mini` → `MacMini`。AI 生成、手工输入、旧草稿和平台单独设置采用同一规则；作品标题和正文不变。旧任务不会因此自动重发。
+
+### 早期版本功能（0.2.120）
 
 - 修复同路径视频被替换后，恢复任务仍复制旧素材指纹、反复失败的问题。新增“重新校验当前视频”和任务“重新校验视频”，明确确认当前素材后保留手动文案、话题和封面；校验不会自动上传、发布或复活已停止任务。
 - 文件发生变化时显示“需重新准备”及具体原因，不再误报为封面快照缺失或可自动恢复；取消、切换账号/素材及校验期间再次修改文件时，拒绝使用过期结果。
@@ -43,15 +47,14 @@ Windows 模式不要求齐放 APP，但不是“无需任何软件”：技能�
 - 任务记录支持搜索与平台筛选；改进空状态、窄窗口和错误提示。
 - 强化安装包隐私检查。AI 标题 20 字、正文 60 字规则与人工自由编辑保持分离。
 
-请前往 [v0.2.120 Release](https://github.com/WarpDrive-Weison/qifang-post/releases/tag/v0.2.120) 下载：
+Mac 请前往 [v0.2.136 Release](https://github.com/WarpDrive-Weison/qifang-post/releases/tag/v0.2.136) 下载：
 
-- macOS 安装包（推荐）：`QifangPost-0.2.120-macOS-QA-arm64.dmg`
-- macOS 备用压缩包：`QifangPost-0.2.120-macOS-QA-arm64.zip`（与 DMG 二选一）
-- 校验清单：`SHA256SUMS-0.2.120.txt`
-- AI 技能包：`qifang-post-skill-0.2.120.zip`（Mac 辅助操作 / Windows 独立浏览器模式）；技能摘要：`SHA256SUMS-skill-0.2.120.txt`
+- macOS 安装包（推荐）：`QifangPost-0.2.136-macOS-QA-arm64.dmg`
+- 校验清单：`SHA256SUMS-0.2.136.txt`
+- AI 技能未改版，仍从 [v0.2.120 Release](https://github.com/WarpDrive-Weison/qifang-post/releases/tag/v0.2.120) 下载 `qifang-post-skill-0.2.120.zip` 和对应的技能摘要。
 - 第三方合规材料：`ffmpeg-9.0.1.tar.xz` 和 `ffmpeg-9.0.1.tar.xz.asc`
 
-**Mac APP 用户只需安装 DMG 或 Mac ZIP；Windows 用户下载技能包，不安装 Mac APP。**两种方式均无需安装第三方源码或上游签名文件。下载后核对 SHA-256；详细步骤见 [安装说明](docs/INSTALL.md)。旧技能 0.2.103 仅供历史版本核验，新使用者请选择 0.2.120。
+**Mac 用户只需安装 DMG；Windows 用户只下载技能包。** 下载后请核对 SHA-256，见[安装说明](docs/INSTALL.md)。
 
 ## 支持范围
 
@@ -106,7 +109,7 @@ APP 的“发布成功”是提交后作品列表同标题核验的业务状态�
 
 ## 版本与验收
 
-v0.2.120 的变更、测试数字和限制见 [Release Notes](docs/RELEASE_NOTES_0.2.120.md) 与 [QA Scope](docs/QA_SCOPE_0.2.120.md)。平台页面会持续改版，离线回归和安装验证不等同于一次新的公网投稿，也不保证所有电脑或平台页面零故障。
+[0.2.136 更新与验收说明](docs/RELEASE_NOTES_0.2.136.md)。平台页面会持续变化，安装验证不等同于公网投稿。
 
 ## 第三方平台声明
 
